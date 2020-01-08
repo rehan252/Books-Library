@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookLibrary',
     'rest_framework',
+    'accounts',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
 # MEDIA
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+LOGIN_URL = 'accounts/login/'

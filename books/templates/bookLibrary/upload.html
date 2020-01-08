@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Upload Book Form</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap4 %}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Upload">
+        {{ bootstrap_form form }}
+        <input type="submit" class="btn btn-primary" value="Upload">
     </form>
 </body>
 </html>

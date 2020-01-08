@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Book(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     author = models.CharField(max_length=150)
     book_name = models.CharField(max_length=200)
     cover_image = models.ImageField(upload_to='img', null=True, blank=True)
