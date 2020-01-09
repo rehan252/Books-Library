@@ -8,6 +8,7 @@ class Book(models.Model):
     book_name = models.CharField(max_length=200)
     cover_image = models.ImageField(upload_to='img', null=True, blank=True)
     description = models.CharField(max_length=450)
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.book_name + "Uploaded by " + self.user.username

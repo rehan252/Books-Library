@@ -46,6 +46,16 @@ def upload(request):
 
 
 @login_required()
+def details(request, id):
+    book_id = int(id)
+    try:
+        book_det = Book.objects.get(id=book_id)
+    except Book.DoesNotExist:
+        return redirect('BookLibrary:home')
+    return render(request, 'bookLibrary/details.html', {'book_det': book_det})
+
+
+@login_required()
 def edit(request, id):
     book_id = int(id)
     try:

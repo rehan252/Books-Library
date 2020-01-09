@@ -7,6 +7,6 @@ class BookUpload(forms.ModelForm):
 
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ('book_name', 'author', 'cover_image', 'description')
 
 
